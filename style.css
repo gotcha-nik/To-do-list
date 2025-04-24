@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #f0f2ff, #e0e7ff); /* Light, modern gradient */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  min-height: 100vh;
+}
+
+section {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  padding: 2rem;
+  width: 100%;
+  max-width: 36rem; /* Increased max-width */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added box-shadow transition */
+}
+
+section:hover {
+  transform: scale(1.04); /* Subtler scale on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+h2 {
+  font-size: 2.25rem; /* Larger heading */
+  font-weight: 700;  /* Use 700 for bold */
+  color: #4f46e5; /* Vibrant purple */
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+input[type="text"] {
+  border-radius: 0.5rem;
+  border: 2px solid #d1d8f3; /* Light purple border */
+  outline: none;
+  padding: 0.75rem;
+  width: calc(100% - 10rem); /* Adjusted width */
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f8fafc; /* Very light background */
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.5); /* Lighter purple focus shadow */
+  border-color: #a855f7; /* More vibrant focus border */
+}
+
+button {
+  background: linear-gradient(to right, #8b5cf6, #6d28d9); /* Purple gradient */
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem; /* Slightly increased padding */
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(to right, #7c3aed, #4c1d95); /* Darker purple gradient */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  background: linear-gradient(to right, #5b21b6, #3b0764); /* Even darker gradient */
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+li {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e0e7ff; /* Added border */
+}
+
+li:hover {
+  background-color: #f3f4ff; /* Lighter hover background */
+  transform: scale(1.02);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle hover shadow */
+  border-color: #d1d8f3;
+}
+
+li button {
+  background-color: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem; /* Increased font size slightly */
+  transition: background-color 0.2s ease, transform 0.2s ease; /* Added transform */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+li button:hover {
+  background-color: #dc2626;
+  transform: scale(1.1);
+}
+
+li button:active {
+  background-color: #b91c1c;
+  transform: scale(1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
