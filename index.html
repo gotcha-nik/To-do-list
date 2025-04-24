@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex flex-col items-center justify-start pt-10">
+    <section class="bg-white rounded-lg shadow-md p-6 w-full max-w-md transition-transform hover:scale-105">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">To-Do List</h2>
+        <div class="flex space-x-2 mb-4">
+            <input type="text" id="taskInput" placeholder="Enter task" class="flex-grow rounded-md border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 p-2">
+            <button onclick="addTask()" class="bg-blue-500 hover:bg-blue-600 text-white rounded-md p-2 transition-colors duration-300">Add Task</button>
+        </div>
+        <ul id="taskList" class="space-y-3">
+            </ul>
+    </section>
+    <script>
+        function addTask() {
+            const task = document.getElementById("taskInput").value;
+            if (task === "") return;
+            const li = document.createElement("li");
+            li.textContent = task;
+            li.classList.add("bg-gray-50", "rounded-md", "p-3", "text-gray-700", "cursor-pointer", "transition-all", "duration-300", "hover:bg-gray-100", "hover:scale-102", "flex", "justify-between", "items-center");
+
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";  // Changed to "Delete"
+            deleteButton.classList.add("bg-red-500", "text-white", "rounded-md", "p-1", "text-xs", "transition-colors", "duration-200", "hover:bg-red-600");
+            deleteButton.onclick = () => li.remove();
+
+            const taskTextSpan = document.createElement("span");
+            taskTextSpan.textContent = task;
+            taskTextSpan.classList.add("flex-grow");  // Make the text span expand
+
+            li.appendChild(taskTextSpan);  // Add the text span
+            li.appendChild(deleteButton); // Add the delete button
+            
+            document.getElementById("taskList").appendChild(li);
+            document.getElementById("taskInput").value = "";
+        }
+    </script>
+</body>
+</html>
